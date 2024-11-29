@@ -1,0 +1,43 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body
+{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-image: url(./Images/pexels-norma-mortenson-4392025.jpg);
+    background-size: cover;
+    
+}
+.login-box
+{
+    background-color:#333333;
+    opacity: 0.5;
+    height: 500px;
+    width: 700px;
+    border-radius: 20px;
+    
+}
+.login-text
+{
+    display: flex;
+    justify-content: center;
+    color: #f1f1f1;
+    font-size: 50px;
+    font-family: 'Poppins';font-size: 45px;
+}
+
