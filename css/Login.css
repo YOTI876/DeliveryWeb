@@ -1,43 +1,52 @@
-
-*
+html,body
 {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-html,body
-{
     height: 100%;
     width: 100%;
     overflow: hidden;
 }
 
-.container
+body
+{
+   display: flex;
+   justify-content: center; 
+   align-items: center;
+   height: 100%;
+   width: 100%;
+}
+
+.image
+{
+    width: 50vw;
+    height: 60vw;
+}
+
+.login-con
 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100%;
-    background-image: url(/Images/pexels-norma-mortenson-4392025.jpg);
-    background-size: cover;
-    
+    background-color: #f8f8f8;
+    width: 50vw;
+    height: 50vw;
 }
 .login-box
 {
-    background-color:#333333;
-    opacity: 0.5;
+    background-color: #ffffff;
+    width: 600px;
     height: 500px;
-    width: 700px;
-    border-radius: 20px;
+    border-radius: 10px;
+    outline: 1px #bababa;
+    outline-style:groove;
     
+    
+
 }
 .login-text
 {
     display: flex;
     justify-content: center;
-    color: #f1f1f1;
-    font-size: 50px;
-    font-family: 'Poppins';font-size: 45px;
+    color: black;
+    font-size: 30px;
 }
-
