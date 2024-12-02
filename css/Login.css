@@ -126,11 +126,15 @@ body
 {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 10px;
 }
 .login-button
 {
-    width: 95%;
+   
+    width: 200%;
     height: 50px;
     border-radius: 25px;
     border-width: 1px;
@@ -144,12 +148,59 @@ body
     color:#f1f1f1;
     cursor: pointer;
 }
-.forgotPass-con
+
+.terms-and-conditions
 {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-left: 15px;
+    gap: 5px;
+}
+.terms2
+{
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
+
+
+.login-google-con
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-left: 15px;
+    margin-right: 10px;
+    
+}
+.login-google
+{
+    background-color: #333333;
+    height: 70px;
+    width: 50%;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+
+.forgotPass-con
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+.forgotPass
+{
+    font-size: 20px;
+    font-family: "metropolis", Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
 }
 
 
