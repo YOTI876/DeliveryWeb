@@ -1,3 +1,4 @@
+//black bar under header
 window.addEventListener("scroll", function () {
     const transparentElement = document.querySelector(".transparent");
 
@@ -8,3 +9,14 @@ window.addEventListener("scroll", function () {
         transparentElement.style.opacity = "0";
     }
 });
+
+var loginbutton = document.querySelector(".login-button");
+
+loginbutton.addEventListener("click", () => {
+
+});
+
+
+
+
+
