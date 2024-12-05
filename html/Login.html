@@ -10,62 +10,66 @@
     <div class="box1">
       <img class="image" src="/Images/phone-del2.jpg" alt="" />
     </div>
-    <div class="box2">
-      <div class="login-con">
-        <div class="login-box">
-          <p class="login-text">Log in</p>
-          <div class="new-regi-con">
-            <p class="New">New user?</p>
-            <p class="reg" onclick="window.location.href='Register.html'">
-              Register
-            </p>
-          </div>
-          <p class="Email">E-mail</p>
-          <div class="TextBoxEmail-con">
-            <input
-              type="text"
-              placeholder="Enter e-mail adress"
-              class="TextBoxEmail"
-            />
-          </div>
-          <p class="Password">Password</p>
-          <div class="Password-box-con">
-            <input
-              type="text"
-              placeholder="Enter password"
-              class="TextBoxPass"
-            />
-          </div>
+    <form action="" id="login-form">
+      <div class="box2">
+        <div class="login-con">
+          <div class="login-box">
+            <p class="login-text">Log in</p>
+            <div class="new-regi-con">
+              <p class="New">New user?</p>
+              <p class="reg" onclick="window.location.href='Register.html'">
+                Register
+              </p>
+            </div>
+            <p class="Email">E-mail</p>
+            <div class="TextBoxEmail-con">
+              <input
+                type="text"
+                placeholder="Enter e-mail adress"
+                class="TextBoxEmail"
+                id="email"
+              />
+            </div>
+            <p class="Password">Password</p>
+            <div class="Password-box-con">
+              <input
+                type="text"
+                placeholder="Enter password"
+                class="TextBoxPass"
+                id="password"
+              />
+            </div>
 
-          <div class="terms-and-conditions">
-            <input type="checkbox" name="" id="" />
-            <small class="terms1">I agree to the</small>
-            <small class="terms2" onclick="">terms and conditions</small>
-          </div>
+            <div class="terms-and-conditions">
+              <input type="checkbox" name="" id="" />
+              <small class="terms1">I agree to the</small>
+              <small class="terms2" onclick="">terms and conditions</small>
+            </div>
 
-          <div class="logButton-con">
-            <button class="login-button">Log in</button>
-          </div>
+            <div class="logButton-con">
+              <button class="login-button">Log in</button>
+            </div>
 
-          <div class="line-or-line">
-            <span class="line"></span>
-            <span class="or">or</span>
-            <span class="line"></span>
-          </div>
+            <div class="line-or-line">
+              <span class="line"></span>
+              <span class="or">or</span>
+              <span class="line"></span>
+            </div>
 
-          <div class="login-google-con">
-            <div class="login-google">1</div>
-          </div>
+            <div class="login-google-con">
+              <div class="login-google">1</div>
+            </div>
 
-          <div class="forgotPass-con">
-            <p class="forgotPass">Forgot password?</p>
+            <div class="forgotPass-con">
+              <p class="forgotPass">Forgot password?</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="/scripts/Main.js"></script>
     <!-- firebase -->
-    <script type="module" src="/src-firebase/index.js"></script>
+    <script type="module" src="/src-firebase/login.js"></script>
   </body>
 </html>
