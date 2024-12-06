@@ -33,6 +33,8 @@ function loginUser(inputEmail, inputPassword) {
       if (user.email === inputEmail && user.password === inputPassword) {
         found = true;
         alert("Login successful!");
+        sessionStorage.setItem("logedUser", user.email)
+        window.location.href = "index.html";
         // Perform further actions, such as redirecting to a dashboard
       }
     });

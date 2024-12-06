@@ -72,22 +72,26 @@
 
 main
 {
-    border-top: 0.1px solid rgb(197, 197, 197);
     display: flex;
-    /* flex-wrap: wrap;
-    flex-direction: row; */
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+}
+.post-box-con
+{
+    display: flex;
     justify-content: center;
-    margin-bottom: 10px;
-    left: 0;
+    align-items: center;
     background-color: rgb(240, 240, 240);
-    height: 280px;
+    height: 250px;
     width: 100%;
+    border-top: 0.1px solid rgb(197, 197, 197);
 }
 .post-box
 {
     margin: 0 250px;
     overflow: scroll;
     display: flex;
+
 
 }
 .post
@@ -208,6 +212,22 @@ footer
     border-radius: 10px;
 }
 
+.post-under-con
+{
+  display: flex;
+  justify-content: center;
+}
 
+.post-under-under
+{
+    display: flex;
+    flex-direction: row;
+}
 
-
+.post-under
+{
+    background-color: #333333;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}

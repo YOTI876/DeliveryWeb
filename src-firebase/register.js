@@ -20,6 +20,18 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 const form = document.getElementById("form");
 
+//checkbox if checked
+const checkbox = document.getElementById("checkbox");
+const regiButton = document.getElementById("Button-register");
+const terms = document.getElementById("terms");
+
+regiButton.disabled = true;
+
+checkbox.addEventListener("change", ()=>{
+    regiButton.disabled = !checkbox.checked;
+});
+
+//firebase
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -35,4 +47,7 @@ form.addEventListener("submit", (e) => {
   });
 
   form.reset();
+  setTimeout(()=>{
+    window.location.href = "index.html";
+  },500);
 });

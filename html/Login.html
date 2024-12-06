@@ -57,7 +57,14 @@
             </div>
 
             <div class="login-google-con">
-              <div class="login-google">1</div>
+              <div class="google-login" id="login-google">
+                <img
+                  src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                  alt="Google Logo"
+                  style="height: 31px; vertical-align: middle"
+                />
+                <span style="margin-left: 10px">Login with Google</span>
+              </div>
             </div>
 
             <div class="forgotPass-con">
@@ -69,6 +76,7 @@
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="/scripts/Main.js"></script>
+    <script type="module" defer src="/src-firebase/googleLog.js"></script>
     <!-- firebase -->
     <script type="module" src="/src-firebase/login.js"></script>
   </body>
