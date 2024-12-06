@@ -186,12 +186,18 @@ footer
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 200px;
     align-items: normal;
     padding-bottom: 50px;
     padding-top: 20px;
     background-color: rgb(240, 240, 240);
     border-top: 0.1px solid rgb(197, 197, 197);
+}
+.footer-con
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 260px;
 }
 .information,.work,.contact-inf
 {
@@ -207,8 +213,8 @@ footer
 {
     background-color: #333333;
     margin-bottom: 10px;
-    width: 150px;
-    height: 50px;
+    width: 200px;
+    height: 70px;
     border-radius: 10px;
 }
 
@@ -216,18 +222,27 @@ footer
 {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
 
-.post-under-under
+.post-under-under, .post-under-under1, .post-under-under2
 {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    overflow: auto;
+    margin-left: 245px;
+    margin-right: 245px;
 }
 
 .post-under
 {
     background-color: #333333;
-    width: 100px;
-    height: 100px;
+    width: 300px;
+    height: 200px;
     margin: 10px;
+    border-radius: 14px;
+    cursor: pointer;
+    box-shadow: 2px 2px 7px rgb(41, 41, 41);
 }
