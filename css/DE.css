@@ -246,3 +246,16 @@ footer
     cursor: pointer;
     box-shadow: 2px 2px 7px rgb(41, 41, 41);
 }
+
+
+.blackLines-con
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+#blacklines
+{
+    cursor: pointer;
+}
