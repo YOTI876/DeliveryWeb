@@ -33,15 +33,31 @@
       <div class="linesContainer">
         <div>
           <!-- <div class="lines"><div class="lines"></div></div> -->
-          <div class="LogRegi">
-            <button onclick="window.location.href='Login.html';" class="box">
-              Login
-            </button>
-            <button onclick="window.location.href='Register.html';" class="box">
-              Register
-            </button>
+          <div class="LogRegi" id="LogRegi">
+            <div id="logreg-btn">
+              <button onclick="window.location.href='Login.html';" class="box">
+                Login
+              </button>
+              <button
+                onclick="window.location.href='Register.html';"
+                class="box"
+              >
+                Register
+              </button>
+            </div>
+            <div id="userName"></div>
+
             <div class="blackLines-con">
               <i class="fa-solid fa-bars fa-2xl bars" id="blacklines"></i>
+              <div class="dropdown-menu" id="dropdown-menu">
+                <a href="#link1">Link 1</a>
+                <a href="#link2">Link 2</a>
+                <a
+                  id="Logout"
+                  style="color: red; cursor: pointer; display: none"
+                  >Logout</a
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -115,15 +131,17 @@
       </div>
     </main>
     <div class="post-under-con">
-      <p>PIZZA DAY!</p>
+      <p class="Text-Post">PIZZA DAY!</p>
       <div class="post-under-under">
-        <div class="post-under">1</div>
+        <div class="post-under" onclick="window.location.href='ItemPage.html';">
+          1
+        </div>
         <div class="post-under">1</div>
         <div class="post-under">1</div>
         <div class="post-under">1</div>
         <div class="post-under">1</div>
       </div>
-      <p>Coca Cola Deals!</p>
+      <p class="Text-Post">Coca Cola Deals!</p>
       <div class="post-under-under1">
         <div class="post-under">1</div>
         <div class="post-under">1</div>
@@ -131,7 +149,7 @@
         <div class="post-under">1</div>
         <div class="post-under">1</div>
       </div>
-      <p>New</p>
+      <p class="Text-Post">New</p>
       <div class="post-under-under2">
         <div class="post-under">1</div>
         <div class="post-under">1</div>
@@ -140,6 +158,12 @@
         <div class="post-under">1</div>
       </div>
     </div>
+
+    <div class="image-last-con">
+      <p class="slogan">Class And Reliability In Every Delivery</p>
+      <!-- <img src="/Images/delivery-man-2.jpg" alt="" class="image-last" /> -->
+    </div>
+
     <footer>
       <div class="footer-con">
         <div class="g-a">
