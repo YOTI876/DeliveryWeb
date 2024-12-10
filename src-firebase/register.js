@@ -48,6 +48,6 @@ form.addEventListener("submit", (e) => {
 
   form.reset();
   setTimeout(()=>{
-    window.location.href = "index.html";
+    window.location.href = "Login.html";
   },500);
 });
