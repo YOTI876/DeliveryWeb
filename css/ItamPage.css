@@ -45,9 +45,13 @@ body
 .headerLogo
 {
     transform: scale(200%);
-    padding-left: 6px;
+    padding-left: 167px;
     color: black;
     cursor: pointer;
+}
+.LogRegi
+{
+    padding-right: 178px;
 }
 
 .box
@@ -96,35 +100,65 @@ body
 {
     display: flex;
     flex-direction: row;
+    gap: 30px;
 }
 .main1
 {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 100vw;
-    height: 190vh;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 .main2
 {
     display: flex;
-    background-color: aquamarine;
-    margin-right: 50px;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 155px;
+    margin-bottom: 100px;
 }
 .pageInfo
 {
-    width: 100px;
-    height: 10 px;
+
+    display: flex;
+    background-color: #eaeaea;
+    margin-top: 10px;
+    border-radius: 20px;
+    width: 58vw;
+    height: 190.3vh;
+    box-shadow: 1px 1px 10px rgb(19, 19, 19);
 }
 .items-con
 {
     display: flex;
-    background-color: #333333;
-    width: 17%;
-    height: 1350px;
-    margin-top: 5px;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eaeaea;
+    margin-top: 10px;
     margin-left: 253px;
     border-radius: 20px;
+    width: 13vw;
+    height: 190vh;
+    box-shadow: 1px 1px 10px rgb(19, 19, 19);
+}
+.item
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid gray;
+    border-width: 1px;
+    width: 98%;
+    height: 70px;
+    gap: 5px;
+    cursor: pointer;
+}
+.item:hover
+{
+    
+    box-shadow: 0px 1px #919191;
+   
 }
 .categories
 {
@@ -328,4 +362,12 @@ footer
   #userName
   {
     display: none;
+  }
+
+  .KFC
+  {
+    
+    height: 34px;
+    width: 34px;
+    margin-bottom: 10px;
   }

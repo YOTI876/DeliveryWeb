@@ -9,6 +9,7 @@ if(!(currentUser == null))
     user.innerHTML = `Welcome ${currentUser.split('@')[0]}`;
     user.style.fontSize = '20px';
     user.style.fontWeight = '600';
+    user.style.marginBottom = '3px';
 
     const userName = document.getElementById('userName');
     logRegBtn.style.display = 'none';
