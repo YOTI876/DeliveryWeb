@@ -79,6 +79,8 @@ main
 .post-box-con
 {
     display: flex;
+    padding: 0 195px;
+    gap: 10px;
     justify-content: center;
     align-items: center;
     background-color: rgb(240, 240, 240);
@@ -88,9 +90,10 @@ main
 }
 .post-box
 {
-    margin: 0 250px;
-    overflow: scroll;
+    margin: 0;
+    overflow: hidden;
     display: flex;
+    
 
 
 }
@@ -102,6 +105,26 @@ main
     justify-content: center;
     div{width: 100px; background-color: #333333; height: 100px; margin: 1px; border-radius: 10px; margin: 10px;}
     
+}
+.arrow-con
+{
+    display: flex;
+    /* transform: translateX(-430%); */
+   
+}
+.arrow
+{
+    background-color: #fff; /* Adjust color */
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 18px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+.arrow:hover
+{
+    background-color: #333333;
 }
 
 .LogRegi
@@ -377,3 +400,12 @@ footer
   {
     display: none;
   }
+
+  body
+  {
+    user-select: none; 
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+  }
+

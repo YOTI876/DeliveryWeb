@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/ForgotPass.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box1">
+      <img class="image" src="/Images/phone-del2.jpg" alt="" />
+    </div>
+    <form action="" id="login-form">
+      <div class="box2">
+        <div class="login-con">
+          <div class="login-box">
+            <p class="login-text">Change password</p>
+            <div class="new-regi-con">
+              <p class="New">New user?</p>
+              <p class="reg" onclick="window.location.href='Register.html'">
+                Register
+              </p>
+            </div>
+            <p class="Email">E-mail</p>
+            <div class="TextBoxEmail-con">
+              <input
+                type="text"
+                placeholder="Enter e-mail adress"
+                class="TextBoxEmail"
+                id="email"
+              />
+            </div>
+            <div class="logButton-con">
+              <button class="login-button" id="reset">Send email</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/scripts/Main.js"></script>
+    <script type="module" defer src="/src-firebase/ForgotPass.js"></script>
+    <!-- firebase -->
+  </body>
+</html>

@@ -112,9 +112,6 @@ body
 }
 .main2
 {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     margin-top: 155px;
     margin-bottom: 100px;
 }
@@ -142,24 +139,54 @@ body
     height: 190vh;
     box-shadow: 1px 1px 10px rgb(19, 19, 19);
 }
-.item
+.item, .item-first
 {
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom: solid gray;
     border-width: 1px;
-    width: 98%;
+    width: 100%;
     height: 70px;
     gap: 5px;
     cursor: pointer;
+    font-family: "metropolis", Arial, Helvetica, sans-serif;
+    transition: all 0.3s ease;
 }
 .item:hover
 {
-    
+    border-width: 1px;
+    background-color: #c8c8c8;
     box-shadow: 0px 1px #919191;
    
 }
+.item-first:hover
+{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-width: 1px;
+    background-color: #c8c8c8;
+    box-shadow: 0px 1px #919191;
+}
+
+/* all page info  */
+
+.KFC-Info
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 80px;
+}
+.KFC-Titel
+{
+    font-size: 45px;
+    margin-top: 10%;
+    font-family: "metropolis", Arial, Helvetica, sans-serif;
+}
+
 .categories
 {
     display: flex;
@@ -353,6 +380,14 @@ footer
     }
   }
 
+  body
+  {
+    user-select: none; /* Prevent text selection */
+    -webkit-user-select: none; /* For Safari and older WebKit browsers */
+    -moz-user-select: none; /* For Firefox */
+    -ms-user-select: none; /* For older Internet Explorer */
+  }
+
   #logreg-btn
   {
     display: flex;
@@ -366,8 +401,44 @@ footer
 
   .KFC
   {
-    
     height: 34px;
     width: 34px;
     margin-bottom: 10px;
   }
+
+  .TimeToOrder-con
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%; 
+  }
+  .TimeToOrder
+  {
+    background-color: #333333;
+    border-radius: 20px;
+    height: 110px;
+    width: 90%;
+  }
+
+  .Gyro-House-Info
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 80px;
+  }
+
+  .Gyro-House-Titel
+  {
+    font-size: 45px;
+    margin-top: 10%;
+    font-family: "metropolis", Arial, Helvetica, sans-serif;
+  }
+
+  /* .hidden
+  {
+    display: none;
+  } */

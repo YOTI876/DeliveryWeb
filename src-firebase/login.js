@@ -1,9 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import {
-  getDatabase,
-  ref,
-  onValue,
-} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
 // Firebase Configuration
 const firebaseConfig = {
@@ -18,36 +14,26 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
-
-// Reference to users in database
-const usersRef = ref(database, "login-register");
+const auth = getAuth(app);
 
 // Login Function
 function loginUser(inputEmail, inputPassword) {
-  onValue(usersRef, (snapshot) => {
-    let found = false;
-
-    snapshot.forEach((childSnapshot) => {
-      const user = childSnapshot.val();
-      if (user.email === inputEmail && user.password === inputPassword) {
-        found = true;
-        alert("Login successful!");
-        sessionStorage.setItem("logedUser", user.email)
-        window.location.href = "index.html";
-        // Perform further actions, such as redirecting to a dashboard
-      }
-    });
-
-    if (!found) {
+  signInWithEmailAndPassword(auth, inputEmail, inputPassword)
+    .then((userCredential) => {
+      // Login successful
+      const user = userCredential.user;
+      alert("Login successful!");
+      sessionStorage.setItem("loggedUser", user.email); // Save session
+      window.location.href = "index.html"; // Redirect to the dashboard or main page
+    })
+    .catch((error) => {
+      // Handle login errors
+      console.error("Login failed:", error);
       alert("Invalid email or password!");
-    }
-  }, {
-    onlyOnce: true // Fetch data only once to reduce load
-  });
+    });
 }
 
-// Example: Form Handling
+// Form Handling
 document.getElementById("login-form").addEventListener("submit", (e) => {
   e.preventDefault();
   const email = document.getElementById("email").value;
@@ -55,4 +41,3 @@ document.getElementById("login-form").addEventListener("submit", (e) => {
 
   loginUser(email, password);
 });
-

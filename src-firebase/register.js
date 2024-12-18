@@ -1,10 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import {
-  getDatabase,
-  ref,
-  push,
-  set,
-} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAzt5l9rq682xL0tLlHZpHrvuvK6M0Vj0c",
@@ -17,37 +12,42 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
+const auth = getAuth(app);
 const form = document.getElementById("form");
 
-//checkbox if checked
+// Checkbox logic
 const checkbox = document.getElementById("checkbox");
 const regiButton = document.getElementById("Button-register");
-const terms = document.getElementById("terms");
 
 regiButton.disabled = true;
-
-checkbox.addEventListener("change", ()=>{
-    regiButton.disabled = !checkbox.checked;
+checkbox.addEventListener("change", () => {
+  regiButton.disabled = !checkbox.checked;
 });
 
-//firebase
+// Firebase Authentication for Registration
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-
 
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
-  const newClientRef = push(ref(database, "login-register"));
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Successfully registered
+      const user = userCredential.user;
+      console.log("User registered successfully:", user);
 
-  set(newClientRef, {
-    email: email,
-    password: password
-  });
+      alert("Registration successful!");
+      form.reset();
 
-  form.reset();
-  setTimeout(()=>{
-    window.location.href = "Login.html";
-  },500);
+      // Redirect to login page
+      setTimeout(() => {
+        window.location.href = "Login.html";
+      }, 500);
+    })
+    .catch((error) => {
+      // Handle errors
+      console.error("Error during registration:", error.message);
+      alert(`Registration failed: ${error.message}`);
+    });
 });
