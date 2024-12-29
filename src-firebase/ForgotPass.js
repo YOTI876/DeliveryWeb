@@ -2,7 +2,6 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebas
 import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
 import { getAuth, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
-// Firebase Configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAzt5l9rq682xL0tLlHZpHrvuvK6M0Vj0c",
   authDomain: "project-1-d2777.firebaseapp.com",
@@ -13,11 +12,10 @@ const firebaseConfig = {
   measurementId: "G-G63GDMQWXB",
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const database = getDatabase(app);
-// Reset password logic
+//reset password
 const reset = document.getElementById("reset");
 reset.addEventListener("click", function (event) {
   event.preventDefault();

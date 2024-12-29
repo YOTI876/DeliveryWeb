@@ -15,7 +15,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const form = document.getElementById("form");
 
-// Checkbox logic
+
 const checkbox = document.getElementById("checkbox");
 const regiButton = document.getElementById("Button-register");
 
@@ -24,7 +24,7 @@ checkbox.addEventListener("change", () => {
   regiButton.disabled = !checkbox.checked;
 });
 
-// Firebase Authentication for Registration
+//firebase authentication
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -33,20 +33,20 @@ form.addEventListener("submit", (e) => {
 
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-      // Successfully registered
+      //Successfull
       const user = userCredential.user;
       console.log("User registered successfully:", user);
 
       alert("Registration successful!");
       form.reset();
 
-      // Redirect to login page
+      //redirect
       setTimeout(() => {
         window.location.href = "Login.html";
       }, 500);
     })
     .catch((error) => {
-      // Handle errors
+      
       console.error("Error during registration:", error.message);
       alert(`Registration failed: ${error.message}`);
     });

@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
-// Firebase Configuration
+
 const firebaseConfig = {
   apiKey: "AIzaSyAzt5l9rq682xL0tLlHZpHrvuvK6M0Vj0c",
   authDomain: "project-1-d2777.firebaseapp.com",
@@ -12,16 +12,16 @@ const firebaseConfig = {
   measurementId: "G-G63GDMQWXB",
 };
 
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
-// Google Login Event
+//google Login
 document.getElementById("login-google").addEventListener("click", () => {
   signInWithPopup(auth, provider)
     .then((result) => {
-      const user = result.user; // Get user info
+      const user = result.user; 
       console.log("User Info:", user);
       window.location.href = "index.html";
     //   alert(`Welcome, ${user.displayName}`);

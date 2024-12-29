@@ -1,9 +1,9 @@
-//black bar under header
+//black line
 window.addEventListener("scroll", function () {
     const transparentElement = document.querySelector(".transparent");
 
-    // Show the transparent element when scrolling down
-    if (window.scrollY > 50) { // Adjust this value as needed
+    //show
+    if (window.scrollY > 50) {
         transparentElement.style.opacity = "1";
     } else {
         transparentElement.style.opacity = "0";
